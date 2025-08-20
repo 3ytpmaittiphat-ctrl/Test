@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองคิวออนไลน์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ระบบจองคิวออนไลน์</h1>
+        <p>กรุณากรอกข้อมูลเพื่อจองคิว</p>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h2>จองคิว</h2>
+            <form id="queue-form">
+                <div class="form-group">
+                    <label for="name">ชื่อ-นามสกุล:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">เบอร์โทรศัพท์:</label>
+                    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+                </div>
+                <button type="submit">ยืนยันการจองคิว</button>
+            </form>
+            <div id="form-message" class="message"></div>
+        </section>
+
+        <section class="queue-list">
+            <h2>คิวของคุณ</h2>
+            <div id="my-queue-number" class="queue-number"></div>
+        </section>
+
+        <hr>
+
+        <section class="admin-panel">
+            <h2>แผงควบคุมผู้ดูแลระบบ</h2>
+            <div class="admin-controls">
+                <button id="call-next-btn">เรียกคิวถัดไป</button>
+                <button id="reset-btn">รีเซ็ตคิวทั้งหมด</button>
+            </div>
+            <div class="admin-queue-list">
+                <h3>รายการคิวทั้งหมด</h3>
+                <ul id="admin-queue-ul">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
